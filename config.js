@@ -1,6 +1,13 @@
-// ╔╗ ╔═╗╔╗╔╔╦╗╔═╗
-// ╠╩╗║╣ ║║║ ║ ║ ║
-// ╚═╝╚═╝╝╚╝ ╩ ╚═╝
+//
+//  _   _            _        
+// | | | |          | |       
+// | | | | ___ _ __ | |_ ___  
+// | | | |/ _ \ '_ \| __/ _ \ 
+// \ \_/ /  __/ | | | || (_) |
+//  \___/ \___|_| |_|\__\___/ 
+//                            
+//    Redesinged Bento fork!                
+// 
 // ┌─┐┌─┐┌┐┌┌─┐┬┌─┐┬ ┬┬─┐┌─┐┌┬┐┬┌─┐┌┐┌
 // │  │ ││││├┤ ││ ┬│ │├┬┘├─┤ │ ││ ││││
 // └─┘└─┘┘└┘└  ┴└─┘└─┘┴└─┴ ┴ ┴ ┴└─┘┘└┘
@@ -17,11 +24,12 @@ const CONFIG = {
 
   // Greetings
   greetingMorning: 'Good morning,',
-  greetingAfternoon: 'Hey,',
+  greetingAfternoon: 'Hello,',
   greetingEvening: 'Good night,',
   greetingNight: 'You should go to sleep,',
 
   // Weather
+  // Use openweathermap.org
   weatherKey: 'XXX',
   weatherIcons: 'OneDark', // 'Nord', 'Dark', 'White'
   weatherUnit: 'C',

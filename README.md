@@ -2,13 +2,15 @@
 ![image](assets/img/Header.png)
 
 <div align="center">
-    <b>🍱 Minimalist, elegant and simple startpage inspired by the Bento box!</b>
+    <b>🍱 Elegant and simple startpage with fancy blur. [Bento](https://github.com/migueravila/Bento) fork!</b>
+    <b>The name, Vento, means "wind" in Italian. By changing only one letter (and only a few lines in code) I've created something refreshingly new.</b>
 </div>
 
 <br />
 <br />
 
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/migueravila)
+[!["Send me crypto!"](https://i.imgur.com/NbWEinI.png)](https://arturro43.github.io/donateme.txt)
+Visit original repo - [Bento](https://github.com/migueravila/Bento)
 
 <br />
 
