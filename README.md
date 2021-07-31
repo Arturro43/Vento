@@ -84,7 +84,7 @@ To change the default name, the greetings and if you want to have an image backg
 
 ```
 
-> You cah change the background by substituting the `background.jpg` file in `assets` folder.
+> You can change the background by substituting the `background.jpg` file in `assets` folder.
 
 ![](assets/img/previewbg.png)
 
