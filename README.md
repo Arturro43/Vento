@@ -3,7 +3,11 @@
 
 <div align="center">
     <b>🍱 Elegant and simple startpage with fancy blur. Bento fork!</b>
-    <b>The name, Vento, means "wind" in Italian. By changing only one letter (and only a few lines in code) I've created something refreshingly new.</b>
+
+
+    <b>The name, Vento, means "wind" in Italian.
+    
+    By changing only one letter (and only a few lines in code) I've created something refreshingly new.</b>
 </div>
 
 <br />
