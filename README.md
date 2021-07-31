@@ -9,7 +9,9 @@
 <br />
 <br />
 
-[!["Send me crypto!"](https://i.imgur.com/NbWEinI.png)](https://arturro43.github.io/donateme.txt)
+[Send me crypto!](https://arturro43.github.io/donateme.txt)
+
+
 Visit original repo - [Bento](https://github.com/migueravila/Bento)
 
 <br />
