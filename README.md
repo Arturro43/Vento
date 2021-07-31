@@ -7,7 +7,7 @@
     <br />
     <b>The name, Vento, means "wind" in Italian.</b>
     <br />
-    <b>By changing only one letter in name (and only a few lines in code) I've created something refreshingly new.</b>
+    <b>By changing only one letter in name (and only a few lines in code) I've created something refreshing. Just like wind.</b>
 </div>
 
 <br />
