@@ -83,7 +83,14 @@ body {
   width: 25px;
   height: 25px;
 }
-
+.search{
+ color:            var(--fg);
+ background-color: var(--bg);
+ padding:               20px;
+ border-color:     var(--fg);
+ outline:               none;
+ opacity:                1.0;
+}
 .container {
   width: 145vh;
   height: 85vh;
