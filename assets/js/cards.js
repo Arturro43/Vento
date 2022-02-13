@@ -1,24 +1,21 @@
-console.log("Connected cards");
+// ┌─┐┌─┐┬─┐┌┬┐┌─┐
+// │  ├─┤├┬┘ ││└─┐
+// └─┘┴ ┴┴└──┴┘└─┘
+// Function to print Button Cards.
 
 const printCards = () => {
   for (const card of CONFIG.cards) {
-    console.log(card.id);
-
     let item = `
         <a
           href="${card.link}"
-          target="${CONFIG.openInNewTab ? "_blank" : ""}"
-          class="buttonLink__link card buttonLink__link-${
-            card.id
-          }"
+          target="${CONFIG.openInNewTab ? '_blank' : ''}"
+          class="card button button__${card.id}"
         >
-          <i class="buttonLink__icon" data-feather="${
-            card.icon
-          }"></i>
+          <i class="buttonIcon" icon-name="${card.icon}"></i>
         </a>
     `;
 
-    const position = "beforeend";
+    const position = 'beforeend';
 
     buttonsContainer.insertAdjacentHTML(position, item);
   }
