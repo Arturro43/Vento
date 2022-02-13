@@ -22,19 +22,20 @@ Visit original repo - [Bento](https://github.com/migueravila/Bento)
 
 ## 👇 Index
 - [👇 Index](#-index)
-- [✨ Features:](#-features)
-- [🚀 Usage:](#-usage)
-    - [As Home Page:](#as-home-page)
-    - [As New Tab:](#as-new-tab)
+- [✨ Features](#-features)
+- [🚀 Usage](#-usage)
+    - [As Home Page](#as-home-page)
+    - [As New Tab](#as-new-tab)
 - [🎨 Customization](#-customization)
   - [👋 General: Name, Image Background and Greetings](#-general-name-image-background-and-greetings)
   - [🏷️ Button Links](#️-button-links)
   - [📑 List Links](#-list-links)
   - [⛈️ Weather: Api Key, Icons and Unit](#️-weather-api-key-icons-and-unit)
   - [💛 Colors](#-colors)
+  - [🌑 Auto change theme](#-auto-change-theme)
 
 
-## ✨ Features:
+## ✨ Features
 
 - **Easy configuration** file.
 - **Dark/Light** mode, you can toggle them and It'll be saved in local storage.
@@ -44,9 +45,9 @@ Visit original repo - [Bento](https://github.com/migueravila/Bento)
 - **Icons** all icons are from Feather Icons (Some others I made them with the Feather icons as a base)
 - **Modular** javascript files for an easy read.
 
-## 🚀 Usage:
+## 🚀 Usage
 
-#### As Home Page:
+#### As Home Page
 
 1. Fork this repo
 2. Enable the Github Pages service `Settings > GitHub Pages > Source [master branch] > Save`
@@ -55,7 +56,7 @@ Visit original repo - [Bento](https://github.com/migueravila/Bento)
    - Click the Home panel.
    - Click the menu next to Homepage and new windows and choose to show custom URLs and add your `Github Pages link`
 
-#### As New Tab:
+#### As New Tab
 
 You can use different Add-ons/Extensions for it
 
@@ -84,7 +85,7 @@ To change the default name, the greetings and if you want to have an image backg
 
 ```
 
-> You can change the background by substituting the `background.jpg` file in `assets` folder.
+> You cah change the background by substituting the `background.jpg` file in `assets` folder.
 
 ![](assets/img/previewbg.png)
 
@@ -231,6 +232,24 @@ In the `app.css` file you can change the variables for both themes (Dark and Lig
   --fg: #d8dee9; /* Foreground color */
   --sfg: #3a3a3a; /* Secondary Foreground color */
 }
+```
+
+### 🌑 Auto change theme
+
+The theme can be automatically changed by the OS' current theme or personalized hours
+that you can change in the `config.js` file:
+
+```js
+  // Autochange
+  autoChangeTheme: true,
+
+  // Autochabge by OS
+  changeThemeByOS: false, 
+
+  // Autochange by hour options (24hrs format, string must be in: hh:mm)
+  changeThemeByHour: true, // If it's true, it will use the values below:
+  hourDarkThemeActive: '18:30', // Turn on the dark theme after this hour
+  hourDarkThemeInactive: '07:00', // Turn off the dark theme after this hour and before the above hour
 ```
 
 ![](assets/img/subheader.png)

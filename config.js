@@ -1,13 +1,6 @@
-//
-//  _   _            _        
-// | | | |          | |       
-// | | | | ___ _ __ | |_ ___  
-// | | | |/ _ \ '_ \| __/ _ \ 
-// \ \_/ /  __/ | | | || (_) |
-//  \___/ \___|_| |_|\__\___/ 
-//                            
-//    Redesinged Bento fork!                
-// 
+// ╔╗ ╔═╗╔╗╔╔╦╗╔═╗
+// ╠╩╗║╣ ║║║ ║ ║ ║
+// ╚═╝╚═╝╝╚╝ ╩ ╚═╝
 // ┌─┐┌─┐┌┐┌┌─┐┬┌─┐┬ ┬┬─┐┌─┐┌┬┐┬┌─┐┌┐┌
 // │  │ ││││├┤ ││ ┬│ │├┬┘├─┤ │ ││ ││││
 // └─┘└─┘┘└┘└  ┴└─┘└─┘┴└─┴ ┴ ┴ ┴└─┘┘└┘
@@ -18,25 +11,37 @@ const CONFIG = {
   // └─┘┴ ┴└─┘┴└─┘└─┘
 
   // General
-  name: 'my friend',
+  name: 'John',
   imageBackground: true,
   openInNewTab: true,
+  twelveHourFormat: false,
 
   // Greetings
-  greetingMorning: 'Good morning,',
-  greetingAfternoon: 'Hello,',
-  greetingEvening: 'Good night,',
-  greetingNight: 'You should go to sleep,',
+  greetingMorning: 'Good morning!',
+  greetingAfternoon: 'Good afternoon,',
+  greetingEvening: 'Good evening,',
+  greetingNight: 'Go to Sleep!',
 
   // Weather
-  // Use openweathermap.org
-  weatherKey: 'XXX',
-  weatherIcons: 'OneDark', // 'Nord', 'Dark', 'White'
-  weatherUnit: 'C',
-  // Use https://www.latlong.net/
-  weatherLatitude: 'XXX',
-  weatherLongitude: 'XXX',
-  
+  weatherKey: 'InsertYourAPIKeyHere123456', // Write here your API Key
+  weatherIcons: 'OneDark', // 'Onedark', 'Nord', 'Dark', 'White'
+  weatherUnit: 'C', // 'F', 'C'
+  language: 'en', // More languages in https://openweathermap.org/current#multi
+
+  trackLocation: true, // If false or an error occurs, the app will use the lat/lon below
+  defaultLatitude: '37.775',
+  defaultLongitude: '-122.419',
+
+  // Autochange
+  autoChangeTheme: true,
+
+  // Autochabge by OS
+  changeThemeByOS: false, 
+
+  // Autochange by hour options (24hrs format, string must be in: hh:mm)
+  changeThemeByHour: true,
+  hourDarkThemeActive: '18:30',
+  hourDarkThemeInactive: '07:00',
 
   // ┌─┐┌─┐┬─┐┌┬┐┌─┐
   // │  ├─┤├┬┘ ││└─┐
@@ -54,13 +59,13 @@ const CONFIG = {
       id: '2',
       name: 'Mail',
       icon: 'mail',
-      link: 'https://mail.google.com/',
+      link: 'https://mail.protonmail.com/',
     },
     {
       id: '3',
       name: 'Todoist',
-      icon: 'twitch',
-      link: 'https://twitch.tv/',
+      icon: 'trello',
+      link: 'https://todoist.com',
     },
     {
       id: '4',
@@ -71,14 +76,14 @@ const CONFIG = {
     {
       id: '5',
       name: 'Reddit',
-      icon: 'bookmark',
+      icon: 'glasses',
       link: 'https://reddit.com',
     },
     {
       id: '6',
-      name: 'Youtube',
+      name: 'Odysee',
       icon: 'youtube',
-      link: 'https://youtube.com/',
+      link: 'https://odysee.com/',
     },
   ],
 
@@ -87,45 +92,45 @@ const CONFIG = {
   // ┴─┘┴└─┘ ┴ └─┘
 
   //Icons
-  firstListIcon: 'key',
-  secondListIcon: 'tool',
+  firstListIcon: 'music',
+  secondListIcon: 'coffee',
 
   // Links
   lists: {
     firstList: [
       {
-        name: 'Twitter',
-        link: 'https://twitter.com/',
+        name: 'Inspirational',
+        link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
       },
       {
-        name: 'THN',
-        link: 'https://thehackernews.com/',
+        name: 'Classic',
+        link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
       },
       {
-        name: 'Its FOSS',
-        link: 'https://itsfoss.com/',
+        name: 'Oldies',
+        link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
       },
       {
-        name: 'EFF',
-        link: 'https://www.eff.org/',
+        name: 'Rock',
+        link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
       },
     ],
     secondList: [
       {
+        name: 'Linkedin',
+        link: 'https://linkedin.com/',
+      },
+      {
+        name: 'Figma',
+        link: 'https://figma.com/',
+      },
+      {
+        name: 'Dribbble',
+        link: 'https://dribbble.com',
+      },
+      {
         name: 'Telegram',
         link: 'https://webk.telegram.org',
-      },
-      {
-        name: 'Github',
-        link: 'https://github.com/',
-      },
-      {
-        name: 'Hetzner',
-        link: 'https://hetzner.com/',
-      },
-      {
-        name: 'Protonmail',
-        link: 'https://mail.protonmail.com/',
       },
     ],
   },

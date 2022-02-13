@@ -1,71 +1,92 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+/* 
+// ╔╗ ╔═╗╔╗╔╔╦╗╔═╗
+// ╠╩╗║╣ ║║║ ║ ║ ║
+// ╚═╝╚═╝╝╚╝ ╩ ╚═╝ 
+*/
 
-/* V A R I A B L E S */
+/* 
+//  ┬  ┬┌─┐┬─┐┬┌─┐┌┐ ┬  ┌─┐┌─┐
+//  ┐┌┘├─┤├┬┘│├─┤├┴┐│  ├┤ └─┐
+//  ┘ ┴ ┴┴└─┴┴ ┴└─┘┴─┘└─┘└─┘ 
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap'); /* Font Import */
 
 :root {
-  /* Fonts  */
-  --fsg: 12vh; /* Time and Greetings */
-  --fsm: 8vh; /* Date */
-  --fss: 3vh; /* Greetings and Weather widger */
-  --fses: 2vh; /* Links List */
+  /* Font Size */
+  --fg-primary: 12vh; /* Time and Greetings */
+  --fg-secondary: 3vh; /* Greetings and Weather widger */
+  --fg-date: 8vh; /* Date */
+  --fg-list: 2vh; /* Links List */
+  --icon: 3vh; /* Icon Size */
 
-  /* Light theme  */
-  --accent: #696969; /* Hover color */
-  --bg: #ffffff00; /* Background color */
-  --sbg: #ffffff2d; /* Cards color */
-
+  /* Fonts Color */
   --fg: #272727; /* Foreground color */
   --sfg: #272727; /* Sceondary Foreground color */
 
+  /* Light Colors  */
+  --accent: #6969691; /* Hover color */
+  --background: #ffffff00; /* Background color */
+  --cards: #ffffff2d; /* Cards color */
+
   /* Image background  */
-
-  /* Uncoment this section to get the 
-    image wallpaper. You can also 
-    change the --imgcol value 
-    to make the filter to your own */
-
-  --imgbg: url(assets/background.jpg);
+  --imgbg: url(assets/background.jpg); /* Image URL */
   --imgcol: linear-gradient(
     rgba(255, 255, 255, 0.103),
     rgba(255, 255, 255, 0.103)
   ); /* Filter color */
 }
 
-/* Dark theme  */
 .darktheme {
+  /* Dark Colors  */
   --accent: #777777; /* Hover color */
-  --bg: #19171a; /* Background color */
-  --sbg: #201e212d; /* Cards color */
+  --background: #19171a; /* Background color */
+  --cards: #201e212d; /* Cards color */
+
+  /* Fonts Color */
   --fg: #d8dee9; /* Foreground color */
   --sfg: #d8d8d8; /* Secondary Foreground color */
+
+  /* Image background  */
   --imgcol: linear-gradient(
     rgba(0, 0, 0, 0.603),
     rgba(0, 0, 0, 0.603)
   ); /* Filter color */
 }
 
-/* S T Y L E S */
+/* 
+//  ┌─┐┌┬┐┬ ┬┬  ┌─┐┌─┐
+//  └─┐ │ └┬┘│  ├┤ └─┐
+//  └─┘ ┴  ┴ ┴─┘└─┘└─┘ 
+*/
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
-  transition: 0.1s ease-out;
-}
-
-.withImageBackground {
-  background-image: var(--imgcol), var(--imgbg);
-  background-size: cover;
+  transition: 0.2s ease-in-out;
 }
 
 body {
   width: 100vw;
   height: 100vh;
-  background-color: var(--bg);
+  background-color: var(--background);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.notransition {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+.withImageBackground {
+  background-image: var(--imgcol), var(--imgbg);
+  background-size: cover;
 }
 
 #themeButton {
@@ -79,7 +100,7 @@ body {
   background-color: #00000000;
 }
 
-#themeButton__icon {
+#themeIcon {
   width: 25px;
   height: 25px;
 }
@@ -96,14 +117,14 @@ body {
 
 .card {
   backdrop-filter: blur(25px);
-  background-color: var(--sbg); 
+  background-color: var(--cards);
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.445);
-  border-radius: 5px;
+  border-radius: 12px;
 }
 
 .card:hover {
   transform: translateY(-0.2rem);
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.445);
 }
 
 .timeBlock {
@@ -124,14 +145,14 @@ body {
   justify-content: center;
 }
 
-.weatherBlock__date {
+.date {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 30px;
 }
 
-.weatherBlock__weather {
+.weather {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -146,46 +167,46 @@ body {
 #hour,
 #separator,
 #minutes {
-  font-size: var(--fsg);
+  font-size: var(--fg-primary);
   font-weight: bolder;
   color: var(--fg);
 }
 
 #month,
 #day {
-  font-size: var(--fsm);
+  font-size: var(--fg-date);
   font-weight: bold;
   color: var(--fg);
 }
 
 #day {
-  margin-left: 20px;
+  margin-left: 1.5rem;
 }
 
 #greetings {
-  font-size: var(--fss);
+  font-size: var(--fg-secondary);
   color: var(--fg);
 }
 
-.weather-icon img {
+.weatherIcon img {
   width: 70px;
   height: 70px;
 }
 
-.temperature-value p {
-  font-size: var(--fss);
+.weatherValue p {
+  font-size: var(--fg-secondary);
   font-weight: bolder;
   margin-left: 15px;
   color: var(--fg);
 }
 
-.temperature-description p {
-  font-size: var(--fss);
+.weatherDescription p {
+  font-size: var(--fg-secondary);
   margin-left: 15px;
   color: var(--fg);
 }
 
-.buttonLink {
+.buttonsBlock {
   grid-row: 3 / span 2;
   grid-column: 1 / span 2;
   display: grid;
@@ -195,47 +216,47 @@ body {
   padding: 20px;
 }
 
-.buttonLink__link {
+.button {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
 
-.buttonLink__icon {
-  width: 3vh;
-  height: 3vh;
+.buttonIcon {
+  width: var(--icon);
+  height: var(--icon);
   color: var(--fg);
 }
 
-.buttonLink__link-1 {
+.button__1 {
   grid-row: 1;
   grid-column: 1;
 }
-.buttonLink__link-2 {
+.button__2 {
   grid-row: 1;
   grid-column: 2;
 }
-.buttonLink__link-3 {
+.button__3 {
   grid-row: 2;
   grid-column: 1;
 }
-.buttonLink__link-4 {
+.button__4 {
   grid-row: 2;
   grid-column: 2;
 }
-.buttonLink__link-5 {
+.button__5 {
   grid-row: 1;
   grid-column: 3;
 }
-.buttonLink__link-6 {
+.button__6 {
   grid-row: 2;
   grid-column: 3;
 }
-.buttonLink__link:hover {
+.button:hover {
   background-color: var(--accent);
 }
-.buttonLink__link:hover svg {
+.button:hover svg {
   stroke: var(--sfg);
 }
 
@@ -253,28 +274,27 @@ body {
   grid-column: 4;
   grid-row: 3 / span 2;
 }
-.list__head {
+.listIcon {
   margin-top: 3vh;
   margin-bottom: 2vh;
   color: var(--fg);
-  width: 3vh;
-  height: 3vh;
+  width: var(--icon);
+  height: var(--icon);
 }
-.list__link {
+.listItem {
   text-decoration: none;
-  font-size: var(--fses);
+  font-size: var(--fg-list);
   color: var(--fg);
   margin-top: 1vh;
   padding: 8px 12px;
-  border-radius: 5px;
+  border-radius: 12px;
   font-weight: bold;
   text-align: center;
   width: 80%;
 }
-.list__link:hover {
+.listItem:hover {
   background-color: var(--accent);
   color: var(--sfg);
-  
 }
 
 /* M E D I A - Q U E R I E S */
@@ -295,15 +315,18 @@ body {
   }
 
   #greetings {
-    font-size: var(--fss);
+    font-size: var(--fg-secondary);
   }
 
   .list {
     display: none;
   }
 
-  .buttonLink {
+  .buttons {
     grid-column: 1 / span 4;
+  }
+
+  .button {
     grid-gap: 3vw;
     padding-left: 100px;
     padding-right: 100px;
